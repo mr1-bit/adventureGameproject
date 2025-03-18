@@ -20,6 +20,7 @@ namespace adventureGameproject
             public static void ClearConsole()
             {
                 Console.Clear();
+
             }
         }
 
@@ -29,6 +30,7 @@ namespace adventureGameproject
         {
             WriteUtils.Write("enter a username", ConsoleColor.Cyan);
 
+            
 
             Player player = new Player();
             Enemy enemy = new Enemy();
@@ -39,7 +41,9 @@ namespace adventureGameproject
             enemy.Attack = 12;
 
             WriteUtils.Write("welcome " + player.Name, ConsoleColor.Green);
-            
+
+            WriteUtils.Write("starting in 1990",  ConsoleColor.Green);
+
             player.DealDamage(player.Attack);
 
             enemy.DealDamage(enemy.Attack);
