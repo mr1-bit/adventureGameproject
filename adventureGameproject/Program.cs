@@ -9,40 +9,24 @@ namespace adventureGameproject
 {
     class Program
     {
-        public static class WriteUtils
-        {
-            public static void Write(string text, ConsoleColor color)
-            {
-                Console.ForegroundColor = color;
-                Console.WriteLine(text);
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-            public static void ClearConsole()
-            {
-                Console.Clear();
-
-            }
-        }
-
-
-
         static void Main(string[] args)
         {
-            WriteUtils.Write("enter a username", ConsoleColor.Cyan);
+            //WriteUtils.Write("enter a username", ConsoleColor.Cyan);
 
             
-
+            WriteUtils write = new WriteUtils();
             Player player = new Player();
             Enemy enemy = new Enemy();
-            
+
+            write.Write("asd", ConsoleColor.Green);
 
             player.Name = Console.ReadLine();
             player.Attack = 10;
             enemy.Attack = 12;
 
-            WriteUtils.Write("welcome " + player.Name, ConsoleColor.Green);
+            write.Write("welcome " + player.Name, ConsoleColor.Green);
 
-            WriteUtils.Write("starting in 1990",  ConsoleColor.Green);
+            write.Write("starting in 1990",  ConsoleColor.Green);
 
             player.DealDamage(player.Attack);
 
