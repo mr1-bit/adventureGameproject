@@ -17,7 +17,18 @@ namespace adventureGameproject
             WriteUtils write = new WriteUtils();
             Player player = new Player();
             Enemy enemy = new Enemy();
-           
+            LootTable table = new LootTable();
+
+            table.Gamble();
+            table.Gamble();
+            table.Gamble();
+            table.Gamble();
+            table.Gamble();
+            table.Gamble();
+            table.Gamble();
+            table.Gamble();
+
+
             enemy.Level = 1f;
             enemy.Attack = 6f;
             enemy.Defense = 4f;
