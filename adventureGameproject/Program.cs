@@ -1,6 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-// changes the color of the console text
 using System.Security.Cryptography.X509Certificates;
 using System;
 
@@ -19,14 +17,8 @@ namespace adventureGameproject
             Enemy enemy = new Enemy();
             LootTable table = new LootTable();
 
-            table.Gamble();
-            table.Gamble();
-            table.Gamble();
-            table.Gamble();
-            table.Gamble();
-            table.Gamble();
-            table.Gamble();
-            table.Gamble();
+            table.Item(table.Gamble());
+
 
 
             enemy.Level = 1f;
@@ -37,7 +29,7 @@ namespace adventureGameproject
             enemy.LocalSchale();
 
 
-            write.Write("asd", ConsoleColor.Green);
+            write.Write("wasd", ConsoleColor.Green);
 
             player.Name = Console.ReadLine();
             player.Attack = 10;
