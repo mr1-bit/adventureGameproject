@@ -18,30 +18,30 @@ namespace adventureGameproject
             Player player = new Player();
             Enemy enemy = new Enemy();
            
-            enemy.Level = 1;
-            enemy.Attack = 3;
-            enemy.Defense = 4;
-            enemy.Health = 50;
+            enemy.Level = 1f;
+            enemy.Attack = 6f;
+            enemy.Defense = 4f;
+            enemy.Health = 50f;
 
-            enemy.Schale();
+            enemy.LocalSchale();
 
 
             write.Write("asd", ConsoleColor.Green);
 
             player.Name = Console.ReadLine();
             player.Attack = 10;
-            enemy.Attack = 12;
+           
 
             write.Write("welcome " + player.Name, ConsoleColor.Green);
 
             write.Write("starting in 1990",  ConsoleColor.Green);
+            Console.WriteLine(enemy.Attack + " attk");
 
             player.DealDamage(player.Attack);
 
-            enemy.DealDamage(enemy.Attack);
-            Schaling schaling = new Schaling(player.Attack, enemy.Attack);
+            //Schaling schaling = new Schaling(player.Attack, enemy.Attack);
 
-            enemy.Health = schaling.schale;
+            //enemy.Health = schaling.schale;
             Console.WriteLine("enemy health: " + enemy.Health);
 
 

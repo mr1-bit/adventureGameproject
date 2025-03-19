@@ -8,23 +8,27 @@ using System.Threading.Tasks;
 
 namespace adventureGameproject
 {
-    class Enemy : Player
+    class Enemy
     {
         public string Name { get; set; }
-        public int Age { get; set; }
-        public int Health { get; set; }
-        public int Attack { get; set; }
-        public int Defense { get; set; }
-        public int Speed { get; set; }
-        public int Level { get; set; }
-        public float schaleValue {  get; set; }
+        public float Age { get; set; }
+        public float Health { get; set; }
+        public float Attack { get; set; }
+        public float Defense { get; set; }
+        public float Speed { get; set; }
+        public float Level { get; set; }
+        public float scaleValue {  get; set; }
 
 
-        public void Schale()
+        public float LocalSchale()
         {
        
-            schaleValue = ((((Health + Attack + Defense) / 8) / 10f));
-            Console.WriteLine("schale " + schaleValue);
+            scaleValue = ((((Health + Attack + Defense) / 8) / 10f));
+            Console.WriteLine("schale " + scaleValue);
+            Attack *= scaleValue;
+            Console.WriteLine(Attack + " attk");
+
+            return Attack;
         }
 
        
