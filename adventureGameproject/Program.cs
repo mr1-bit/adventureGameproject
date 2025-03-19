@@ -17,6 +17,14 @@ namespace adventureGameproject
             WriteUtils write = new WriteUtils();
             Player player = new Player();
             Enemy enemy = new Enemy();
+           
+            enemy.Level = 1;
+            enemy.Attack = 3;
+            enemy.Defense = 4;
+            enemy.Health = 50;
+
+            enemy.Schale();
+
 
             write.Write("asd", ConsoleColor.Green);
 
