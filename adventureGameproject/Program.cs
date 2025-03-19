@@ -1,6 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Security.Cryptography.X509Certificates;
 using System;
+using adventureGameproject.tets;
+using adventureGameproject.CombatSystem;
+
 
 
 namespace adventureGameproject
@@ -16,8 +19,10 @@ namespace adventureGameproject
             Player player = new Player();
             Enemy enemy = new Enemy();
             LootTable table = new LootTable();
+            Combat combat = new Combat();
 
             table.Item(table.Gamble());
+            
 
 
 

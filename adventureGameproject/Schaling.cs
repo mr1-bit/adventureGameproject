@@ -8,9 +8,8 @@ namespace adventureGameproject
 {
     class Schaling
     {
-        public int schale { get; set; }
-        public Schaling(int x, int y ) {
-            schale = x + y + x * y / 2;
+        public void SchalingTest() {
+            //schale = x + y + x * y / 2;
         }
     }
 }

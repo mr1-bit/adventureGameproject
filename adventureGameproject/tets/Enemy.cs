@@ -6,7 +6,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace adventureGameproject
+
+namespace adventureGameproject.tets
 {
     class Enemy
     {
@@ -23,9 +24,12 @@ namespace adventureGameproject
         public float LocalSchale()
         {
        
-            scaleValue = ((((Health + Attack + Defense) / 8) / 10f));
+            scaleValue = (Health + Attack + Defense) / 8 / 10f;
             Console.WriteLine("schale " + scaleValue);
+
             Attack *= scaleValue;
+            Health *= scaleValue;
+            Defense *= scaleValue;
             Console.WriteLine(Attack + " attk");
 
             return Attack;

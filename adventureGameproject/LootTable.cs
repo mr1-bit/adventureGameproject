@@ -10,13 +10,14 @@ namespace adventureGameproject
 {
      class LootTable
     {
+        WriteUtils write = new WriteUtils();
         public string result { get; set; }
         public string returnItem { get; set; }
         public string Gamble()
         {
 
             var rand = new Random();
-            WriteUtils write = new WriteUtils();
+            
             String[] loot = {"basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", 
                 "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic",  "basic", "basic", "basic",
                 "rare", "rare" , "rare", "rare", "rare", "rare", "rare" , "rare", "rare", "rare", "rare", "rare","rare", "rare","ultraRare", "ultraRare", "ultraRare", "legendary"};
@@ -43,15 +44,11 @@ namespace adventureGameproject
             }
 
              return result = loot[index];
-
-               
-
-            
         }
 
         public string Item(string result = null)
         {
-            WriteUtils write = new WriteUtils();
+            // add more loot
             //var rand = new Random();
             String[] lootItem = {"Sword"};
            
