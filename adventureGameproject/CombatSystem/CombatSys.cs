@@ -12,16 +12,10 @@ namespace adventureGameproject.CombatSystem
         public Combat() { 
 
         }
-        public int DamageCalc(int Damage = 0)
+        public int DamageCalc(int x = 0, int y =0)
         {
-            //String[] data = { sender, Damage.ToString(), reciever };
-
-            
-           
-
-            int damageDealt = 0;
-
-            return damageDealt;
+            //String[] data = { sender, Damage.ToString(), reciever };         
+            return x + y;
         }
         public void Start() 
         {

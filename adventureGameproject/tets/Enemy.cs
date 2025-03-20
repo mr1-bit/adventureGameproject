@@ -13,26 +13,30 @@ namespace adventureGameproject.tets
     {
         public string Name { get; set; }
         public float Age { get; set; }
-        public float Health { get; set; }
+        public int Health { get; set; }
         public float Attack { get; set; }
         public float Defense { get; set; }
         public float Speed { get; set; }
         public float Level { get; set; }
-        public float scaleValue {  get; set; }
+        public float scaleValue {  get; set; }       
+        public int damage { get; set; }
 
 
-        public float LocalSchale()
+        public int LocalSchale()
         {
        
             scaleValue = (Health + Attack + Defense) / 8 / 10f;
             Console.WriteLine("schale " + scaleValue);
 
             Attack *= scaleValue;
-            Health *= scaleValue;
+            Health = (int) Math.Ceiling((Health * scaleValue));
             Defense *= scaleValue;
             Console.WriteLine(Attack + " attk");
+            var damage = Math.Ceiling(Attack);
+           
+            Console.WriteLine(damage + " damage rounded");
 
-            return Attack;
+            return (int) damage;
         }
 
        
