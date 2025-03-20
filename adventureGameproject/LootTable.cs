@@ -24,7 +24,7 @@ namespace adventureGameproject
             Console.WriteLine();
 
             var index =  rand.Next(loot.Length);
-
+            // maby switch case?? idk yet tho
             if (loot[index] == "basic")
             {
                 write.Write(loot[index], ConsoleColor.DarkGray);

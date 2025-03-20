@@ -24,7 +24,7 @@ namespace adventureGameproject.tets
 
         public int LocalSchale()
         {
-       
+            // maby do this in combat class and just return float local schale
             scaleValue = (Health + Attack + Defense) / 8 / 10f;
             Console.WriteLine("schale " + scaleValue);
 
