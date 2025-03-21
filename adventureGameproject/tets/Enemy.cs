@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Net.Mail;
+//using System.Text;
+//using System.Text.RegularExpressions;
+//using System.Threading.Tasks;
+using adventureGameproject.CombatSystem;
 
 
 namespace adventureGameproject.tets
 {
-    class Enemy
+    class Enemy : Combat
     {
         public string Name { get; set; }
         public float Age { get; set; }
@@ -38,6 +39,8 @@ namespace adventureGameproject.tets
 
             return (int) damage;
         }
+
+      
 
        
 

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using adventureGameproject.CombatSystem;
 
 namespace adventureGameproject
 {
-    class Player
+    class Player : Combat
     {
             public string Name { get; set; }
             public int Age { get; set; }
@@ -18,22 +19,19 @@ namespace adventureGameproject
             public int ExperienceNeeded { get; set; }
             public int Damage { get; set; }
             public int statPoints { get; set; }
+            public int Experiance { get; set; }     
 
-        
-        public void DealDamage(int AttackValue = 1)
+        public void LevelCalc (int ExperianceGained)
         {
-            Console.WriteLine(AttackValue);
-           
-        }
+            Experiance += ExperianceGained;
 
-        public void levelCalc (int lvl, int Experiance)
-        {
-            if (Level == 1) {ExperienceNeeded = 100;}
-            else if (Level == 2) {ExperienceNeeded += 50; statPoints += 1;}
-            else if (Level == 3) { }
-            else if (Level == 4) { }
-            else if (Level == 5) { }
+            if (Level == 0) {ExperienceNeeded = 100;}
 
+            else
+            {
+                if(Experiance >= ExperienceNeeded) {Level += 1; ExperienceNeeded += 100; statPoints += 1;} else return;
+            }
+            
         }
 
     }
