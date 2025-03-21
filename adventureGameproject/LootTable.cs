@@ -28,7 +28,6 @@ namespace adventureGameproject
             if (loot[index] == "basic")
             {
                 write.Write(loot[index], ConsoleColor.DarkGray);
-
             }
             else if (loot[index] == "rare")
             {

@@ -12,15 +12,9 @@ namespace adventureGameproject.CombatSystem
         public Combat() { 
 
         }
-        //public int DamageCalc(int x = 0, int y =0)
-        //{
-        
-        //    return x - y;
-        //}
         public void Start() 
         {
             Console.WriteLine("entered combat");
-
         }
         public int TakeDamage(int Health, int takenDamage)
         {
