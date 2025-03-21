@@ -3,6 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using System;
 using adventureGameproject.tets;
 using adventureGameproject.CombatSystem;
+using System.ComponentModel.Design;
 
 
 
@@ -43,6 +44,7 @@ namespace adventureGameproject
             player.Name = Console.ReadLine();
             player.Attack = 10;
             player.Health = 100;
+            player.Defense = 15;
 
             player.Health -= enemy.LocalSchale();
             Console.WriteLine("after schaleing");
@@ -56,13 +58,29 @@ namespace adventureGameproject
 
             write.Write("starting in 1990",  ConsoleColor.Green);
             Console.WriteLine(enemy.Attack + " attk");
-
+            write.Write("encounter an enemy", ConsoleColor.Red);
             combat.Start();
+            if (player.Speed < enemy.Speed)
+            { 
+            
+            
+            
+            
+            }
+            else if (player.Speed > enemy.Speed)
+            {
+                
+            
+            
+            }
+                
+                
+          
 
-            //Schaling schaling = new Schaling(player.Attack, enemy.Attack);
+                    //Schaling schaling = new Schaling(player.Attack, enemy.Attack);
 
-            //enemy.Health = schaling.schale;
-            Console.WriteLine("player health: " +  player.Health);
+                    //enemy.Health = schaling.schale;
+                    Console.WriteLine("player health: " + player.Health);
 
             Console.WriteLine("enemy health: " + enemy.Health);
 
