@@ -48,10 +48,11 @@ namespace adventureGameproject
         public string Item(string result = null)
         {
             // add more loot
-            //var rand = new Random();
-            String[] lootItem = {"Sword"};
-           
-             string returnItem = result + " " +  lootItem[0];
+            var rand = new Random();
+            String[] lootItem = {"Sword", "Bow", "Shield", "ChestPlate", "Boots"};
+            var index = rand.Next(lootItem.Length);
+
+            string returnItem = result + " " +  lootItem[index];
             if (result == null)
             {
                 return "";

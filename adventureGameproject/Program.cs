@@ -32,7 +32,7 @@ namespace adventureGameproject
             enemy.Attack = 6f;
             enemy.Defense = 4f;
             enemy.Health = 50;
-            enemy.Name = "je moeder";
+            enemy.Name = "testE";
 
 
             Console.WriteLine(enemy.Attack);

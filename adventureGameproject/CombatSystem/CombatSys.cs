@@ -25,6 +25,12 @@ namespace adventureGameproject.CombatSystem
         {
             return Health -= takenDamage;
         }
+        public int DealDamage(int Health, int DamageDealt)
+        {
+            return Health -= DamageDealt;
+        }
+
+
         public void Stop(string name) 
         {
             Console.WriteLine("you defeated " + name);
