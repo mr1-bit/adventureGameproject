@@ -4,6 +4,7 @@ using System;
 using adventureGameproject.tets;
 using adventureGameproject.CombatSystem;
 using System.ComponentModel.Design;
+using System.Reflection.Metadata.Ecma335;
 
 
 
@@ -16,7 +17,7 @@ namespace adventureGameproject
             //WriteUtils.Write("enter a username", ConsoleColor.Cyan);
 
             
-            WriteUtils write = new WriteUtils();
+            WriteUtils wr = new WriteUtils();
             Player player = new Player();
             Enemy enemy = new Enemy();
             LootTable table = new LootTable();
@@ -31,6 +32,7 @@ namespace adventureGameproject
             enemy.Attack = 6f;
             enemy.Defense = 4f;
             enemy.Health = 50;
+            enemy.Name = "je moeder";
 
 
             Console.WriteLine(enemy.Attack);
@@ -38,8 +40,8 @@ namespace adventureGameproject
             Console.WriteLine(enemy.Health);
 
 
-            write.Write("stats before schale", ConsoleColor.Green);
-            write.Write("wasd", ConsoleColor.Green);
+            wr.Write("stats before schale", ConsoleColor.Green);
+            wr.Write("wasd", ConsoleColor.Green);
 
             player.Name = Console.ReadLine();
             player.Attack = 10;
@@ -52,35 +54,52 @@ namespace adventureGameproject
             Console.WriteLine(enemy.Defense);
             Console.WriteLine(enemy.Health);
 
+            bool playerTurn = false;
 
 
-            write.Write("welcome " + player.Name, ConsoleColor.Green);
 
-            write.Write("starting in 1990",  ConsoleColor.Green);
+            wr.Write("welcome " + player.Name, ConsoleColor.Green);
+
+            wr.Write("starting in 1990",  ConsoleColor.Green);
             Console.WriteLine(enemy.Attack + " attk");
-            write.Write("encounter an enemy", ConsoleColor.Red);
-            combat.Start();
+            wr.Write("encounter an enemy", ConsoleColor.Red);
+            combat.Start(enemy.Name);
+
+
             if (player.Speed < enemy.Speed)
             { 
-            
-            
-            
-            
+                playerTurn = false;             
             }
             else if (player.Speed > enemy.Speed)
             {
-                
-            
-            
+               playerTurn = true;         
             }
-                
-                
-          
 
-                    //Schaling schaling = new Schaling(player.Attack, enemy.Attack);
+            if (playerTurn) {
+                wr.Write("type a to acctak");
+                string attackUsed = Console.ReadLine();
+                if (attackUsed == "a")
+                {
+                    enemy.Health -= player.Attack;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                player.Health -= enemy.damage;
+            }
 
-                    //enemy.Health = schaling.schale;
-                    Console.WriteLine("player health: " + player.Health);
+
+
+
+
+                //Schaling schaling = new Schaling(player.Attack, enemy.Attack);
+
+                //enemy.Health = schaling.schale;
+                Console.WriteLine("player health: " + player.Health);
 
             Console.WriteLine("enemy health: " + enemy.Health);
 

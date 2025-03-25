@@ -8,7 +8,7 @@ namespace adventureGameproject
 {
     class WriteUtils
     {
-        public void Write(string text, ConsoleColor color)
+        public void Write(string text, ConsoleColor color = ConsoleColor.Gray)
         {
             Console.ForegroundColor = color;
             Console.WriteLine(text);

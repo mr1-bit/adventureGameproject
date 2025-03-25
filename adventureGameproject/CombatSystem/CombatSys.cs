@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using adventureGameproject;
+using adventureGameproject.tets;
 
 
 namespace adventureGameproject.CombatSystem
@@ -14,18 +15,19 @@ namespace adventureGameproject.CombatSystem
         public Combat() { 
 
         }
-        public void Start() 
+        public void Start(string name) 
         {
             Console.WriteLine("entered combat");
+            Console.WriteLine("a " + name + " has appeared");
 
         }
         public int TakeDamage(int Health, int takenDamage)
         {
             return Health -= takenDamage;
         }
-        public void Stop() 
+        public void Stop(string name) 
         {
-            Console.WriteLine("ended");
+            Console.WriteLine("you defeated " + name);
         }
     }
 }
