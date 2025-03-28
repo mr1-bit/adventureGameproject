@@ -102,6 +102,7 @@ namespace adventureGameproject
                 Console.WriteLine("player health: " + player.Health);
 
             Console.WriteLine("enemy health: " + enemy.Health);
+            combat.Stop(name: enemy.Name);
 
 
 

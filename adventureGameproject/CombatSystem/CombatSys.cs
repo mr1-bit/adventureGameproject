@@ -11,23 +11,25 @@ namespace adventureGameproject.CombatSystem
 {
     
     public class Combat
+      
     {
+
+        WriteUtils wr = new WriteUtils();
 
         public string Name;
         public int Age;
+
         public int Health;
         public float Attack;
         public float Defense;
         public int Speed;
+
         public int Level;
 
-        public Combat() { 
-
-        }
         public void Start(string name) 
         {
-            Console.WriteLine("entered combat");
-            Console.WriteLine("a " + name + " has appeared");
+            wr.Write("entered combat");
+            wr.Write("a " + name + " has appeared");
 
         }
         public int TakeDamage(int Health, int takenDamage)
@@ -42,7 +44,7 @@ namespace adventureGameproject.CombatSystem
 
         public void Stop(string name) 
         {
-            Console.WriteLine("you defeated " + name);
+            wr.Write("you defeated " + name, ConsoleColor.Green);
         }
     }
 }

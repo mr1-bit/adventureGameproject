@@ -8,8 +8,7 @@ using adventureGameproject.CombatSystem;
 namespace adventureGameproject
 {
     class Player : Combat
-    {
-          
+    {   
             public int ExperienceNeeded;
 
             public int Damage;
