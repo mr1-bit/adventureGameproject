@@ -6,13 +6,6 @@ namespace adventureGameproject.tets
 {
     class Enemy : Combat
     {
-        public string Name { get; set; }
-        public float Age { get; set; }
-        public int Health { get; set; }
-        public float Attack { get; set; }
-        public float Defense { get; set; }
-        public float Speed { get; set; }
-        public float Level { get; set; }
         public float scaleValue {  get; set; }       
         public int damage { get; set; }
 

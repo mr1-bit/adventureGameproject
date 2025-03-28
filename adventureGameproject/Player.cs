@@ -9,17 +9,14 @@ namespace adventureGameproject
 {
     class Player : Combat
     {
-            public string Name { get; set; }
-            public int Age { get; set; }
-            public int Health { get; set; }
-            public int Attack { get; set; }
-            public int Defense { get; set; }
-            public int Speed { get; set; }
-            public int Level { get; set; }
-            public int ExperienceNeeded { get; set; }
-            public int Damage { get; set; }
-            public int statPoints { get; set; }
-            public int Experiance { get; set; }     
+          
+            public int ExperienceNeeded;
+
+            public int Damage;
+
+            public int statPoints;
+
+            public int Experiance;     
 
         public void LevelCalc (int ExperianceGained)
         {

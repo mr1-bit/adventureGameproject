@@ -28,7 +28,7 @@ namespace adventureGameproject
 
 
 
-            enemy.Level = 1f;
+            enemy.Level = 1;
             enemy.Attack = 6f;
             enemy.Defense = 4f;
             enemy.Health = 50;
@@ -44,9 +44,9 @@ namespace adventureGameproject
             wr.Write("wasd", ConsoleColor.Green);
 
             player.Name = Console.ReadLine();
-            player.Attack = 10;
+            player.Attack = 10f;
             player.Health = 100;
-            player.Defense = 15;
+            player.Defense = 15f;
 
             player.Health -= enemy.LocalSchale();
             Console.WriteLine("after schaleing");
@@ -80,7 +80,7 @@ namespace adventureGameproject
                 string attackUsed = Console.ReadLine();
                 if (attackUsed == "a")
                 {
-                    enemy.Health -= player.Attack;
+                    enemy.Health -= (int) player.Attack;
                 }
                 else
                 {

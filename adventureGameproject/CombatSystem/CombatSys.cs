@@ -12,6 +12,15 @@ namespace adventureGameproject.CombatSystem
     
     public class Combat
     {
+
+        public string Name;
+        public int Age;
+        public int Health;
+        public float Attack;
+        public float Defense;
+        public int Speed;
+        public int Level;
+
         public Combat() { 
 
         }
