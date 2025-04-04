@@ -26,7 +26,7 @@ namespace adventureGameproject.CombatSystem
 
         public int Level;
 
-        public void Construct(string name, int age, int health, float attack, float defense, int speed)
+        public virtual void Construct(string name, int age, int health, float attack, float defense, int speed)
         {
             Name = name;
             Age = age;
@@ -46,15 +46,19 @@ namespace adventureGameproject.CombatSystem
         {
             return Health -= takenDamage;
         }
-        public int DealDamage(int Health, int DamageDealt)
+        public int DealDamage(int EHealth, int DamageDealt)
         {
-            return Health -= DamageDealt;
+            return EHealth -= DamageDealt;
         }
 
 
-        public void Stop(string name) 
+        public void Stop(string name, string action = "defeat") 
         {
-            wr.Write("you defeated " + name, ConsoleColor.Green);
+            if (action == "run")
+            {
+                wr.Write("you ran away from " + name);
+            }
+            else wr.Write("you defeated " + name, ConsoleColor.Green);
         }
     }
 }

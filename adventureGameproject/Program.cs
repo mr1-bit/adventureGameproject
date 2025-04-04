@@ -23,58 +23,8 @@ namespace adventureGameproject
             LootTable table = new LootTable();
             Combat combat = new Combat();
             table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
-            table.Item(table.Gamble());
 
-
-
-
-            enemy.Level = 1;
-            enemy.Attack = 6f;
-            enemy.Defense = 4f;
-            enemy.Health = 50;
-            enemy.Name = "testE";
+            enemy.Construct("testE", 1, 50, 6f, 4f, 10);
 
 
             Console.WriteLine(enemy.Attack);
@@ -85,10 +35,9 @@ namespace adventureGameproject
             wr.Write("stats before schale", ConsoleColor.Green);
             wr.Write("wasd", ConsoleColor.Green);
 
-            player.Name = Console.ReadLine();
-            player.Attack = 10f;
-            player.Health = 100;
-            player.Defense = 15f;
+            String NamePlayer = Console.ReadLine();
+            player.Construct(NamePlayer, 20, 100, 10f, 15f, 10);
+            //player.Construct(player.Name, player.Age, player.Health, player.Attack, player.Defense, player.Speed);
 
             player.Health -= enemy.LocalSchale();
             Console.WriteLine("after schaleing");
@@ -101,8 +50,15 @@ namespace adventureGameproject
 
 
             wr.Write("welcome " + player.Name, ConsoleColor.Green);
-
+            // tower escape dungeon lvl story
             wr.Write("starting in 1990",  ConsoleColor.Green);
+            wr.Write("you are a " + player.Name, ConsoleColor.Green);
+            wr.Write("you are " + player.Age + " years old", ConsoleColor.Green);
+            wr.Write("you find yourself in a tower", ConsoleColor.DarkMagenta);
+            wr.Write("Use your skills to escape", ConsoleColor.Green);
+            wr.Write("Good luck", ConsoleColor.Red);
+            wr.Write("difficulty: easy", ConsoleColor.Green);
+            wr.Write("start");
             Console.WriteLine(enemy.Attack + " attk");
             wr.Write("encounter an enemy", ConsoleColor.Red);
             combat.Start(enemy.Name);

@@ -29,6 +29,16 @@ namespace adventureGameproject
             }
             
         }
+        public override void Construct(string name, int age, int health, float attack, float defense, int speed)
+        {
+            base.Construct(name, age, health, attack, defense, speed);
+            Health = health;
+            Attack = attack;
+            Defense = defense;
+            Speed = speed;
+            Damage = (int)Math.Ceiling(Attack);
+
+        }
 
     }
 } 
