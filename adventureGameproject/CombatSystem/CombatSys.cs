@@ -60,5 +60,17 @@ namespace adventureGameproject.CombatSystem
             }
             else wr.Write("you defeated " + name, ConsoleColor.Green);
         }
+
+        public void SpeedCheck(int playerSpeed, int enemySpeed)
+        {
+            if (playerSpeed > enemySpeed)
+            {
+                wr.Write("you attack first");
+            }
+            else
+            {
+                wr.Write("enemy attacks first");
+            }
+        }
     }
 }
