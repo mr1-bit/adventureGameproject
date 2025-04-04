@@ -22,9 +22,51 @@ namespace adventureGameproject
             Enemy enemy = new Enemy();
             LootTable table = new LootTable();
             Combat combat = new Combat();
-
             table.Item(table.Gamble());
-            
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+            table.Item(table.Gamble());
+
 
 
 

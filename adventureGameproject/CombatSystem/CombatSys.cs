@@ -26,6 +26,16 @@ namespace adventureGameproject.CombatSystem
 
         public int Level;
 
+        public void Construct(string name, int age, int health, float attack, float defense, int speed)
+        {
+            Name = name;
+            Age = age;
+            Health = health;
+            Attack = attack;
+            Defense = defense;
+            Speed = speed;
+        }
+
         public void Start(string name) 
         {
             wr.Write("entered combat");

@@ -18,9 +18,9 @@ namespace adventureGameproject
 
             var rand = new Random();
             
-            String[] loot = {"basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", 
-                "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic",  "basic", "basic", "basic",
-                "rare", "rare" , "rare", "rare", "rare", "rare", "rare" , "rare", "rare", "rare", "rare", "rare","rare", "rare","ultraRare", "ultraRare", "ultraRare", "legendary"};
+            String[] loot = {"basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic",
+                "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic", "basic",  "basic", "basic", "basic",
+                "rare", "rare" , "rare", "rare", "rare", "rare", "rare" , "rare", "rare", "rare", "rare", "rare","rare", "rare",  "rare", "rare","rare", "ultraRare", "ultraRare", "ultraRare", "ultraRare", "ultraRare", "ultraRare",  "legendary", "legendary",  "legendary",  "legendary",  "mythic"};
             Console.WriteLine();
 
             var index =  rand.Next(loot.Length);
@@ -78,7 +78,11 @@ namespace adventureGameproject
                 {
                     write.Write(returnItem, ConsoleColor.Yellow);
                 }
-                 
+                else if (result == "mythic")
+                {
+                    write.Write(returnItem, ConsoleColor.Red);
+                }
+
             }
                
                 return returnItem;
